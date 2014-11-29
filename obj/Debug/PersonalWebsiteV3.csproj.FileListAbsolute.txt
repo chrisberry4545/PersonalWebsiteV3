@@ -1,0 +1,6 @@
+c:\users\chris\documents\visual studio 2013\Projects\PersonalWebsiteV3\PersonalWebsiteV3\bin\PersonalWebsiteV3.dll.config
+c:\users\chris\documents\visual studio 2013\Projects\PersonalWebsiteV3\PersonalWebsiteV3\bin\PersonalWebsiteV3.dll
+c:\users\chris\documents\visual studio 2013\Projects\PersonalWebsiteV3\PersonalWebsiteV3\bin\PersonalWebsiteV3.pdb
+c:\users\chris\documents\visual studio 2013\Projects\PersonalWebsiteV3\PersonalWebsiteV3\obj\Debug\PersonalWebsiteV3.dll
+c:\users\chris\documents\visual studio 2013\Projects\PersonalWebsiteV3\PersonalWebsiteV3\obj\Debug\PersonalWebsiteV3.pdb
+C:\Users\Chris\Documents\Visual Studio 2013\Projects\PersonalWebsiteV3\PersonalWebsiteV3\obj\Debug\PersonalWebsiteV3.csprojResolveAssemblyReference.cache

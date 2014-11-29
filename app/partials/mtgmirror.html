@@ -1,0 +1,115 @@
+﻿<div ng-controller="mtgmirror as vm">
+
+    <div class="row">
+
+        <article class="col-xs-12 col-lg-9 col-lg-offset-1 infoarticle">
+            <section>
+                <h1>MTG Mirror</h1>
+                <p>
+                    <a href="http://mtgmirror.com">
+                        Have a peak at the website here.
+                    </a>
+                </p>
+                <p>
+                    I got into Magic in 2013 when a housemate promised me it was like Pokemon cards; a game I couldn't get enough of in primary school.
+                </p>
+                <p>
+                    The more established websites provided ways to practice certain elements of the game such as <a href="http://wiki.mtgsalvation.com/article/Booster_draft">drafting</a>.
+                    However, when new cards were released they were often slow to update their websites. I believed this could be done quite
+                    easily so set about building a website that could be updated easily and provide this functionality.
+                </p>
+                <p>
+                    The website gets alot of hits, especially around the release of a new expansion (35,000 in September 2014). The audience is from all over the world but the vast majority come from the US.
+                    The website is much more responsive than any of the other similiar websites as its all done with client side Javascript.
+                </p>
+            </section>
+
+            <section>
+                <h2>What does it do?</h2>
+                <p>
+                    The application consists of 4 parts.
+                </p>
+                <h3>Draft Simulator</h3>
+                <p>
+                    In the draft simulator you play against 7 other AIs I designed, taking it in turn to pick cards.
+                    The AI uses a fairly simple strategy for picking based on the rating of the cards
+                    and the 'colors' (kind of like teams) the cards are part of.
+                </p>
+                <p>
+                    When the all the cards are assigned a player are able to build a deck from them. The app uses <a href="http://www.chartjs.org/">chartjs</a> to generate
+                    graphical analysis of the cards the player has included in their deck.
+                </p>
+                <h3>Sealed Simulator</h3>
+                <p>
+                    Another popular way of playing Magic is 'Sealed' play where each player opens a number of packs and tries to build a deck from the contents.
+                </p>
+                <p>
+                    Like the draft simulator my website provides graphical analysis of the cards picked and allows the user to download their selection as a text file so they can
+                    import their selection to other programs.
+                </p>
+                <h3>Booster Simulator and Card Browser</h3>
+                <p>
+                    I used technologies which allowed me to reuse most of my code so implementing these two features was so simple it would have been wrong not to. The booster simulator
+                    lets people open a number of boosters and the card browser lets people browse all of the cards featured on the website.
+                </p>
+            </section>
+
+            <section>
+                <h2>Choice of technologies</h2>
+                <p>
+                    The majority of the website is built using client side Javascript. This keeps the load on the server smaller and
+                    utilises the power of modern devices. I used <a href="https://angularjs.org/">AngularJS</a> as it allowed me to
+                    seperate fully seperate my logic from the HTML and gave me plenty of chances for code reuse. Much of the logic for
+                    opening packs etc was shared between the different views so using Angular allowed me to put all this logic into services
+                    which could be utilised by any of the views.
+                </p>
+                <p>
+                    I used <a href="http://getbootstrap.com/">Bootstrap</a> to make the website entirely responsive. The site looks great
+                    whatever device you view it on.
+                </p>
+                <p>
+                    I was also able to include some other sweet technologies like HTML5's Application Cache and File Saver.
+                </p>
+            </section>
+
+            <section>
+                <h2>Challenges Faced</h2>
+                <p>
+                    The biggest challenge faced was trying to get the website working as quickly as possible. I needed to show the card images
+                    for many cards at once and I new it would be a pain if each time a user opened a pack they had to wait for all these images
+                    to load.
+                </p>
+                <p>
+                    The solution to this was to use HTML5's Application Cache. This meant I could download all the images from the latest set to the user's
+                    device as soon as they go to the website. Once this happens once the images never need to be loaded again (as long as the user doesn't
+                    clear the app data). There was another cool side effect of this. Once all the data was cached the app is usuable whether you are online
+                    or not.
+                </p>
+                <p>
+                    My other challenge was trying to keep the interface to a minimum so it looks good on any device and doesn't overcomplicate the app.
+                    I have tried to hide more advanced options within toggles and kept non-essential buttons small while making the most used buttons
+                    clear and large. This means that if you want to fine tune the options you can but they won't detract from the experience of the
+                    average user.
+                </p>
+            </section>
+
+            <section>
+                <h2>Pictures</h2>
+
+                <div ng-repeat="set in vm.picturesSets" class="row picturesrow">
+                    <h3>{{set.title}}</h3>
+                    <div ng-repeat="image in set.pictures">
+                        <a href="{{image.src}}" class="highslide" onclick="return hs.expand(this)">
+                            <img src="{{image.src}}" alt="Highslide JS"
+                                 title="{{image.alt}}" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+        </article>
+
+    </div>
+
+</div>

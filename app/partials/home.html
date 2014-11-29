@@ -1,0 +1,22 @@
+﻿<div ng-controller="homepage as vm">
+
+
+    <div class="row">
+        <div ng-repeat="proj in vm.projects" class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row projectcard">
+                <div class="col-xs-12 col-sm-5 col-md-3">
+                    <img src="{{proj.image}}" />
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-9">
+                    <h3>{{proj.title}}</h3>
+                    <p>{{proj.description}}</p>
+                    <a href="{{proj.href}}">
+                        <span class="arrowcontainer"><span class="arrow-right"></span></span>
+                        <span>Read More</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

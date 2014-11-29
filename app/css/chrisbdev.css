@@ -1,0 +1,198 @@
+﻿h1 {
+}
+h2 {
+}
+body {
+    min-height: 1300px;
+    font-size:small;
+}
+
+.mainContainer {
+}
+.largestMaxWidth {
+    max-width:1200px;
+}
+
+p{
+}
+
+/*Top Menu*/
+.navbar {
+    margin-bottom:0;
+    border:none;
+}
+.navbar-default .navbar-brand {
+    font-weight:bold;
+    color:black;
+}
+.navbar-default .navbar-nav>li>a {
+    color:black;
+}
+.navbar-default .navbar-nav>li>a:hover,  .navbar-nav>li.activelink>a {
+    color:white;
+    -o-transition:color .2s ease-out, color 0.3s ease-in;
+  -ms-transition:color .2s ease-out, color 0.3s ease-in;
+  -moz-transition:color .2s ease-out, color 0.3s ease-in;
+  -webkit-transition:color .2s ease-out, color 0.3s ease-in;
+  transition:color .2s ease-out, color 0.3s ease-in;
+}
+@media screen and (min-width:768px) {
+    ul.navbar-nav > li {
+        border-top-left-radius: 10px;
+        border-top-right-radius:10px;
+    }
+}
+.navbar-default .navbar-nav>li:hover, .navbar-default .navbar-nav>li.activelink{
+    background-image:none;
+    background-color:#563d7c;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -moz-transition: background-color 500ms ease-out 0s;
+    -o-transition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
+}
+
+/*Top Menu End*/
+
+/*Top Row Start*/
+@media screen and (max-width:1000px) {
+    .toprow h1 {
+        font-size: 2em;
+    }
+
+    .toprow h3 {
+        font-size: 1em;
+    }
+}   
+/*Top Row End*/
+
+
+/*Project cards*/
+.projectcard {
+    border:1px solid #563d7c;
+    margin:20px;
+    padding:20px;
+    color:black;
+}
+.projectcard > div {
+    text-align:center;
+}
+.projectcard > div:last-child {
+    text-align:left;
+    min-height: 300px;
+}
+@media screen and (min-width:600px) {
+    .projectcard > div:last-child {
+        min-height: 200px;
+    }
+}
+@media screen and (min-width:770px) {
+    .projectcard > div:last-child {
+        min-height: 270px;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .projectcard > div:last-child {
+        border-left: 1px solid #563d7c;
+    }
+}
+.projectcard > div > a {
+    border:1px solid #563d7c;
+    color:black;
+    display:inline-block;
+    width: 200px;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    right: 0
+    
+}
+.projectcard > div > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    text-decoration:none;
+    cursor:pointer;
+    color:white;
+    background-color: #6f5499;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#563d7c),to(#6f5499));
+    background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+    background-image: -o-linear-gradient(top,#563d7c 0,#6f5499 100%);
+    background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+}
+.navbar-default .navbar-nav > li > a:focus {
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+}
+.projectcard > div > a > span:first-child {
+    border-right:1px solid #563d7c;
+}
+.projectcard > div > a:hover > span:first-child {
+    border-right:1px solid white;
+}
+.projectcard > div > a > span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size:20px;
+    display: block;
+}
+.projectcard > div > img {
+    width:100%;
+    max-width:150px;
+}
+.toprow {
+    background-color: #6f5499;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#563d7c),to(#6f5499));
+    background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+    background-image: -o-linear-gradient(top,#563d7c 0,#6f5499 100%);
+    background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+
+    text-align:center;
+    font-weight:bold;
+    color:white;
+}
+.arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 20px solid #563d7c;
+    position: absolute;
+    left: 20px;
+}
+.projectcard > div > a:hover .arrow-right {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid white;
+}
+.arrowcontainer {
+    height:30px;
+    width:50px;
+    float:left;
+}
+/*Project cards End*/
+
+/*Info articles*/
+article.infoarticle {
+    /*max-width:800px;*/
+}
+article.infoarticle > section {
+    border-top:1px solid #cfc9d8;
+}
+article.infoarticle > section:first-child {
+    border-top:none;
+}
+.picturesrow img {
+    max-width:300px;
+    max-height:200px;
+}
+.picturesrow {
+    text-align:center;
+}
+.picturesrow > div {
+    display:inline-block;
+    padding:30px;
+}
+.picturesrow h3 {
+    text-align: left;
+    padding-left: 20px;
+}
+/*Info articles end*/

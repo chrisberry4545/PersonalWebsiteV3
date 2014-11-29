@@ -1,0 +1,79 @@
+﻿<div ng-controller="dissertation as vm">
+
+    <div class="row">
+        <article class="col-xs-12 col-lg-9 col-lg-offset-1 infoarticle">
+            <section>
+                <h1>Dissertation</h1>
+                <p>
+                    <a href="https://071deb84-a-62cb3a1a-s-sites.googlegroups.com/site/chrisberry4545/files/Dissertation.pdf?attachauth=ANoY7cq-UvDubh1ANgwj0TK5r390p_MB8ClnHfRZ0kGpVClMNYezIyJSomJ1KaVgm0-B9UYoiCuvkVGsXLNj0cfAmW6S6IXgIZx575RvnjYAjb6HSOvJ51mOWY8hL1RZl4QQ2631caepwEJMLBPJOHY0Y-c5rAoTx-Uqi5WfUYoQmdjo13nBgBx0qxAHHnYiU1NWaejDJmdgfTHh4yTkla8xo-AgKtJ2rnqY7IkKBvGfeKowZhcPt2w%3D&attredirects=0">
+                        View the Dissertation (PDF)
+                    </a>
+                </p>
+                <p>
+                    <a href="https://sites.google.com/site/monopolyaisite/game/launch.jnlp?attredirects=0&d=1">
+                        Download the program
+                    </a>
+                </p>
+                <p>
+                    As part of my MSc. in Computer Science I wrote a paper titled 'Using reinforcement learning to
+                    find a winning strategy for Monopoly. I received a distinction for this paper.
+                </p>
+            </section>
+            <section>
+            <h2>What does it do?</h2>
+            <p>
+                Machine Learning requires a large amount of processor power which initial held it back. As processors
+                get more powerful it becomes a very feasible to use this technique to get computers to perform more
+                complex decisions makings where many factors are at work.
+            </p>
+            <p>
+                My project uses <a href="http://en.wikipedia.org/wiki/Reinforcement_learning">Reinforced Learning</a> (an
+                area of Machine Learning) and a <a href="http://en.wikipedia.org/wiki/Artificial_neural_network">Neural Network</a>
+                to allow an Artificial Intelligence to become a good Monopoly player.
+            </p>
+            <p>
+                The AI played many thousands of games against itself during which is tried to work out which moves are most likely to lead to success.
+            </p>
+        </section>
+            <section>
+                <h2>Choice of technologies</h2>
+                <p>
+                    The project was programmed using Java. This was the language I was most comfortable with at the time and also the language which the neural network
+                    I was provided with was written in. I used the GUI widget toolkit, Swing, for the display but the rest of the project could be completed using the
+                    standard java libraries.
+                </p>
+                <p>
+                    I used Java Web start to allow people to easily download the program and so I could get feedback on their experiences against the best AIs. 
+                </p>
+            </section>
+            <section>
+                <h2>Challenges faced</h2>
+                <p>
+                    The biggest challenge faced was doing everything I wanted to in the time limit. As the AI had to play so many games against itself, getting a single version
+                    ready for testing would often take several days of running non-stop on my PC. I also ran some other versions using the amazon services. I worked very long hours
+                    over the first few weeks so I could get the thing running correctly and well tested so I could start experimenting with different factors. When I started experimenting
+                    I had to make sure I planned what I was going to try next based on the possible outcomes of my previous experiments so I didn't waste time changing things once one experiment had 
+                    finished.
+                </p>
+                <p>
+                    Much more detail about the experiments I tried and challenges faced can be found in the 
+                    <a href="https://071deb84-a-62cb3a1a-s-sites.googlegroups.com/site/chrisberry4545/files/Dissertation.pdf?attachauth=ANoY7cq-UvDubh1ANgwj0TK5r390p_MB8ClnHfRZ0kGpVClMNYezIyJSomJ1KaVgm0-B9UYoiCuvkVGsXLNj0cfAmW6S6IXgIZx575RvnjYAjb6HSOvJ51mOWY8hL1RZl4QQ2631caepwEJMLBPJOHY0Y-c5rAoTx-Uqi5WfUYoQmdjo13nBgBx0qxAHHnYiU1NWaejDJmdgfTHh4yTkla8xo-AgKtJ2rnqY7IkKBvGfeKowZhcPt2w%3D&attredirects=0">
+                        Dissertation itself.
+                    </a>
+                </p>
+            </section>
+        <section>
+            <h2>Pictures</h2>
+            <div class="row picturesrow">
+                <div ng-repeat="image in vm.pictures">
+                    <a href="{{image.src}}" class="highslide" onclick="return hs.expand(this)">
+                        <img src="{{image.src}}" alt="Highslide JS"
+                             title="{{image.alt}}" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        </article>
+    </div>
+
+</div>
