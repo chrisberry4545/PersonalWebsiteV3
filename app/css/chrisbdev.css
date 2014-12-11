@@ -206,3 +206,11 @@ article.infoarticle > section:first-child {
 	margin-top:30px;
 	margin-bottom:30px;
 }
+
+.linksLogoColumn {
+	text-align:center;
+}
+.linksLogoColumn img {
+	height:150px;
+	padding-bottom:10px;
+}
