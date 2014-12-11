@@ -1,8 +1,8 @@
 ﻿<div ng-controller="animaladjectives as vm">
     <div class="row">
-        <article class="col-xs-12 col-lg-9 col-lg-offset-1 infoarticle">
+        <article class="col-xs-12 col-lg-10 col-lg-offset-1 infoarticle">
 
-            <section>
+            <section class="row">
                 <h1>Animal Adjectives</h1>
 
                 <p>
@@ -11,62 +11,64 @@
                     </a>
                 </p>
                 <p>
-                    Animal Adjectives started life as a game I played with my housemates while living in Canada. It's pretty
-                    silly but can be a tons of fun.
+                    Animal Adjectives started life as a game I my friends and I used to play while on ski lifts in Canada. 
+                    It's silly but good fun.
                 </p>
             </section>
+            
+            
+			<div class="row pageImage topBorderDivider">
+				<img src="app/img/AnimalAdjectives/bigicon.png"/ alt="Animal Adjectives Logo">
+			</div>
+
+			<div class="row">
+	            <section class="col-xs-12 col-md-4">
+	                <h2>What does it do?</h2>
+	                <p>
+	                    The applications consists of two lists. A list of animal names and a list of adjectives. It chooses a random
+	                    word from each and combines the two together. If you're connected to the net, it then uses a google image search to show 
+	                    the first picture of the animal.
+	                </p>
+	                <p>
+	                    The core application is enhanced by features such as notifications (users are sent an regular Animal Adjectives), a favourites list and share to Facebook button.
+	                </p>
+	            </section>
+	
+	            <section class="col-xs-12 col-md-4">
+	                <h2>Choice of technology</h2>
+	                <p>
+	                    I didn't need to look any further than the standard Android libraries for the majority of the application.
+	                </p>
+	                <p>
+	                    As the adjectives and animals are just stored in a text file they are easy to change and it was simple
+	                    to implement. Text files and images from google rather than storing them locally has kept the size
+	                    of the application down.
+	                </p>
+	                <p>
+	                    I used the Facebook API to allow users to share their favourite Animal Adjectives with their friends.
+	                </p>
+	            </section>
+	
+	            <section class="col-xs-12 col-md-4">
+	                <h2>Challenges faced</h2>
+	                <p>
+	                    The biggest problem I've had so far was getting the Share to Facebook button working. Obstacles such as 
+	                    getting test users set up and posting correctly took me longer than I expected them to.
+	                </p>
+	                <p>
+	                    I also had some issues with notifications. It took me some time to get the hang of setting up a service.
+	                    I found I spent much longer implementing these additional features rather than the core app itself.
+	                </p>
+	                <p>
+	                    The other problem I often find myself facing with Android is making the app look good on a variety of screen sizes. I
+	                    have both a large tablet and smaller phone which made the task easier but it always seems quite fiddly. I find the process
+	                    much easier with web technologies. Next, I intend to see if I can recreate the app using PhoneGap, which will also mean I can
+	                    release it for other operating systems.
+	                </p>
+	            </section>
+          	</div>
 
             <section>
-                <h2>What does it do?</h2>
-                <p>
-                    The applications consists of two lists. A list of animal names and a list of adjectives. It chooses a random
-                    word from each and combines the two together. If you've got an internet connection, it then goes to google images and gets the
-                    first image of the animal.
-                </p>
-                <p>
-                    The core application is enhanced by features such as notifications (users are sent an regular Animal Adjectives), a favourites list and share to Facebook button.
-                </p>
-            </section>
-
-            <section>
-                <h2>Choice of technologies</h2>
-                <p>
-                    I didn't need to look any further than the standard Android libraries for the majority of the application.
-                </p>
-                <p>
-                    As the adjectives and animals are just stored in a text file they are easy to change and it was simple
-                    to implement. Using text files and getting the images from google rather than storing them locally has kept the size
-                    of the application down.
-                </p>
-                <p>
-                    I used the Facebook API to allow users to share their favourite Animal Adjectives with their friends.
-                </p>
-            </section>
-
-            <section>
-                <h2>Challenges faced</h2>
-                <p>
-                    I'd dabled with Android Apps before so much of it was quite familiar. The biggest problem I've had so far was getting
-                    the Share to Facebook button working. I had no experience of working with this and found it much more complicated than
-                    I expected. Getting things such as the test users set up and posting correctly so I could obtain permissions from Facebook
-                    were all long processes.
-                </p>
-                <p>
-                    I also had some issues with notifications. Setting up a service is quite complicated and it took me some time to get the hang of it.
-                    I spent much longer implementing the additional features than the core app itself, which I guess is to be expected given how simple
-                    the core is.
-                </p>
-                <p>
-                    The other problem I often find myself facing with Android is making the app look good on a variety of screen sizes. I
-                    have both a large tablet and smaller phone which made the task easier but it always seems quite fiddly. I find the process
-                    much easier with web technologies and I intend to see if I can recreate the app using PhoneGap, which may also mean I can
-                    release it for other operating systems.
-                </p>
-            </section>
-
-            <section>
-                <h2>Pictures</h2>
-
                 <div ng-repeat="set in vm.picturesSets" class="row picturesrow">
                     <h3>{{set.title}}</h3>
                     <div ng-repeat="image in set.pictures">

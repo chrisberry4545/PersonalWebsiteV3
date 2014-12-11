@@ -1,7 +1,7 @@
 ﻿<div ng-controller="librarians as vm">
 
     <div class="row">
-        <article class="col-xs-12 col-lg-9 col-lg-offset-1 infoarticle">
+        <article class="col-xs-12 col-lg-10 col-lg-offset-1 infoarticle">
 
             <section>
                 <h1>The Librarians' EP</h1>
@@ -12,47 +12,53 @@
                     </a>
                 </p>
                 <p>
-                    My friends band wanted to release their latest E.P in a different manner. I wanted to try out some Android
-                    development so I was happy to try and give it a go.
+                    My friends band wanted to release their latest E.P as an app. I was keen to try some Android
+                    development so I was happy to have a go.
                 </p>
             </section>
 
-            <section>
-                <h2>What does it do?</h2>
-                <p>
-                    The app presents a simple carousel interface for playing a track which fits with the feel of the band.
-                </p>
-                <p>
-                    There are a few other tabs with the band's bio and links to their social media sites.
-                </p>
-            </section>
+			<div class="row pageImage topBorderDivider">
+				<img src="app/img/Librarians/logo.png"/ alt="Librarians EP Logo">
+			</div>
+			
+			<div class="row">
+	            <section class="col-xs-12 col-md-4">
+	                <h2>What does it do?</h2>
+	                <p>
+	                    The app presents a simple carousel interface for playing a tracks. The carousel works nicely and fits with the themes 
+	                    covered by the band.
+	                </p>
+	                <p>
+	                    There other tabs contain a short biography and links to the band's social media.
+	                </p>
+	            </section>
+	
+	            <section class="col-xs-12 col-md-4">
+	                <h2>Choice of technology</h2>
+	                <p>
+	                    Most of the this was built with the native android technologies.
+	                </p>
+	                <p>
+	                    I was able to find an excellent carousel by Igor Kushnarev on <a href="http://www.codeproject.com/Articles/146145/Android-D-Carousel">code project</a> which looks great in the app.
+	                </p>
+	                <p>
+	                    I had to make use of Android's Media Players and Services so the music continued even when the app closed. 
+	                    While implementing this I developed a good understanding of Android Activity lifecycle which has been very useful.
+	                </p>
+	            </section>
+	
+	            <section class="col-xs-12 col-md-4">
+	                <h2>Challenges faced</h2>
+	                <p>
+	                    The biggest challenge was keeping the music playing even when the App had closed. This required a significant amount of testing but luckily the band could help me out with this.
+	                    I was able to get the music player set up correctly with a fixed notification showing when the app was playing. This could of been improved further by adding
+	                    media controls from the notifications screen but due to the time constraints (I needed to finish before the band went live with their EP) I didn't get the opportunity.
+	                </p>
+	            </section>
+			</div>
+			
 
             <section>
-                <h2>Choice of technologies</h2>
-                <p>
-                    Most of the this was built with the native android technologies.
-                </p>
-                <p>
-                    I was able to find an excellent carousel by Igor Kushnarev on <a href="http://www.codeproject.com/Articles/146145/Android-D-Carousel">code project</a> which looks great in the app.
-                </p>
-                <p>
-                    I had to make use of Android's Media Players and Services to get the Music to keep playing even when the app was closed. These parts forced me to get a clear understanding of
-                    an the Android Activity lifecycle which has been very useful.
-                </p>
-            </section>
-
-            <section>
-                <h2>Challenges faced</h2>
-                <p>
-                    The biggest challenge was keeping the music playing even when the App had closed. This required a ton of testing to get right but luckily I had the band to help me out with this.
-                    Eventually I was able to get the music player set up in the proper way with a fixed notification showing when the app was playing. This could of been improved further by adding
-                    media controls from the notifications screen but due to the time constraints (I had to finish before the band went live with their EP) I didn't get the time.
-                </p>
-            </section>
-
-            <section>
-                <h2>Pictures</h2>
-
                 <div ng-repeat="set in vm.picturesSets" class="row picturesrow">
                     <h3>{{set.title}}</h3>
                     <div ng-repeat="image in set.pictures">
